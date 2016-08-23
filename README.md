@@ -6,10 +6,10 @@ the *.cfg files have to be copied to the correspondant IDOLServer repository of 
 
 2. grammar files
 to generate a new grammar
-* copy experis.xml file to C:\HewlettPackardEnterprise\IDOLServer\eduction\grammar
-* modify the file and launch compile.bat
-* the above script copies experis.ecr to C:\HewlettPackardEnterprise\IDOLServer\cfs\grammars
-* you have to modify cfs.cfg if you have added new entities to your dictionnary
+Copy experis.xml file to C:\HewlettPackardEnterprise\IDOLServer\eduction\grammar
+Modify the file and launch compile.bat
+The above script copies experis.ecr to C:\HewlettPackardEnterprise\IDOLServer\cfs\grammars
+You have to modify cfs.cfg if you have added new entities to your dictionnary
 
 3.lua script
 somme sample scripts are available for integration tests purpose
