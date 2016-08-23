@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE grammars SYSTEM "edk.dtd">
+<grammars version="4.0">
+	<include path="company_frefr.ecr" type="private"/>
+	<include path="address_fr.ecr" type="private"/>
+	<include path="date_fre.ecr" type="private"/>
+	<include path="ethnicity_fre.ecr" type="private"/>
+	<include path="gender_fre.ecr" type="private"/>
+	<include path="internet.ecr" type="private"/>
+	<include path="date_numeric.ecr" type="private"/>
+	<grammar name="Category">		
+		<entity name="os" type="public" case="insensitive">
+			<entry>
+				<headword>Linux</headword>
+				<synonym>Linus</synonym>
+			</entry>
+			<entry headword="Linux"/>
+			<entry headword="Ubuntu"/>
+			<entry headword="Fedora"/>
+			<entry headword="Debian"/>
+			<entry headword="Windows"/>
+			<entry headword="Windows 2000"/>
+			<entry headword="Windows NT"/>
+			<entry headword="Windows 95"/>
+			<entry headword="Windows 98"/>
+			<entry headword="Windows XP"/>
+			<entry headword="Windows Vista"/>
+			<entry headword="Windows 7"/>
+			<entry headword="iOS"/>
+			<entry headword="Android"/>
+			<entry headword="Mac OS"/>
+		</entity>
+		<entity name="Programmation" type="public" case="insensitive">
+			<entry headword="C/C++"/>
+			<entry headword="C++"/>
+			<entry headword="Java"/>
+			<entry headword="JEE"/>
+			<entry headword="C#"/>
+			<entry headword=".Net"/>
+			<entry headword="CSS"/>
+			<entry headword="XHTML"/>
+			<entry headword="CSS"/>
+			<entry headword="PHP"/>
+			<entry headword="J2EE"/>
+			<entry headword="XML"/>
+			<entry headword="CMS"/>
+			<entry headword="MySQL"/>
+			<entry headword="Oracle"/>
+			<entry headword="PostreSQL"/>
+			<entry headword="SQL Server"/>
+			<entry headword="Ruby"/>
+			<entry headword="Python"/>
+			<entry headword="Wordpress"/>
+			<entry headword="Spip"/>
+			<entry headword="Prestashop"/>
+			<entry headword="Javascript"/>
+			<entry headword="Shell"/>
+			<entry headword="Bash"/>
+			<entry headword="Apache"/>
+			<entry headword="Fortran"/>
+			<entry headword="LabVIEW"/>
+			<entry headword="Visual Basic"/>
+			<entry headword="Matlab"/>
+			<entry headword="Simulink"/>
+			<entry headword="Autocad"/>
+			<entry headword="Adobe"/>
+			<entry headword="Office"/>
+			<entry headword="Visual Studio"/>
+			<entry headword="Word"/>
+			<entry headword="Excel"/>
+			<entry headword="Powerpoint"/>
+			<entry headword="Outlook"/>
+			<entry headword="Unix"/>
+			<entry headword="Web"/>
+		</entity>
+		<entity name="Langue" type="public" case="insensitive">
+			<entry headword="Français"/>
+			<entry headword="Anglais"/>
+			<entry headword="Arabe"/>
+			<entry headword="Espagnol"/>
+			<entry headword="Italien"/>
+			<entry headword="Allemand"/>
+			<entry headword="Chinois"/>
+			<entry headword="Japonais"/>
+		</entity>
+		<entity name="Loisir" type="public" case="insensitive">
+			<entry headword="Lecture"/>
+			<entry headword="Internet"/>
+			<entry headword="Marche"/>
+			<entry headword="Sport"/>
+			<entry headword="Electronique"/>
+			<entry headword="Prestidigitation"/>
+			<entry headword="Alpinisme"/>
+			<entry headword="Voyage"/>
+			<entry headword="Endurance"/>
+			<entry headword="Basketball"/>
+			<entry headword="Course"/>
+			<entry headword="Natation"/>
+			<entry headword="Roller"/>
+			<entry headword="Bateau"/>
+			<entry headword="Golf"/>
+			<entry headword="Musique"/>
+			<entry headword="Kung-Fu"/>
+		</entity>
+		<entity name="Entreprise" type="public" case="insensitive">
+			<pattern>(?A:company/all/frefr)</pattern>
+		</entity>
+		<entity name="Adresse" type="public" case="insensitive">
+			<pattern>(?A:address/fr)</pattern>
+		</entity>
+		<entity name="Date" type="public" case="insensitive">
+			<!-- <pattern>(?A:date/fre)</pattern>
+			<pattern>(?A:date/ddd/fre)</pattern>
+			<pattern>(?A:date/mmm/fre)</pattern>
+			<pattern>(?A:date/year/fre)</pattern>
+			<pattern>(?A:date/ddmmm/fre)</pattern>
+			<pattern>(?A:date/day_date/fre)</pattern>
+			<pattern>(?A:date/date_year/fre)</pattern>
+			<pattern>(?A:date/day_date_year/fre)</pattern>
+			<pattern>(?A:date/mmm_year/fre)</pattern> -->
+			<!-- <pattern>(?A:date/dd)</pattern>
+			<pattern>(?A:date/dd_fullwidth)</pattern>
+			<pattern>(?A:date/dd2)</pattern>
+			<pattern>(?A:date/dd2_fullwidth)</pattern> -->
+			<!-- <pattern>(?A:date/mm)\s?(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm_fullwidth)\s?(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm2)\s?(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm2_fullwidth)\s?(?A:date/yy)</pattern> -->
+			<pattern>(?A:date/mmm/fre)(.?)(?A:date/year/fre)</pattern>
+			<pattern>(?A:date/mm)(.?)(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm_fullwidth)(.?)(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm2)(.?)(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm2_fullwidth)(.?)(?A:date/yy)</pattern>
+			<pattern>(?A:date/mm)(.?)(?A:date/yyyy)</pattern>
+			<pattern>(?A:date/mm_fullwidth)(.?)(?A:date/yyyy)</pattern>
+			<pattern>(?A:date/mm2)(.?)(?A:date/yyyy)</pattern>
+			<pattern>(?A:date/mm2_fullwidth)(.?)(?A:date/yyyy)</pattern>
+			<pattern>(?A:date/mm)(.?)(?A:date/yyyy_fullwidth)</pattern>
+			<pattern>(?A:date/mm_fullwidth)(.?)(?A:date/yyyy_fullwidth)</pattern>
+			<pattern>(?A:date/mm2)(.?)(?A:date/yyyy_fullwidth)</pattern>
+			<pattern>(?A:date/mm2_fullwidth)(.?)(?A:date/yyyy_fullwidth)</pattern>
+			<pattern>(?A:date/yy)</pattern>
+			<pattern>(?A:date/yy_fullwidth)</pattern>
+			<pattern>(?A:date/yyyy)</pattern>
+			<pattern>(?A:date/yyyy_fullwidth)</pattern>
+			<pattern>(?A:date/yyyy4)</pattern>
+			<pattern>(?A:date/yyyy4_fullwidth)</pattern>
+			<pattern>(?A:date/year)</pattern>
+			<pattern>(?A:date/year_fullwidth)</pattern>
+			<!-- <pattern>(?A:date/yyyymmddsep)</pattern>
+			<pattern>(?A:date/yyyymmdd)</pattern>
+			<pattern>(?A:date/yyyymmdd_safe)</pattern>
+			<pattern>(?A:date/yymmddsep)</pattern>
+			<pattern>(?A:date/yymmdd)</pattern>
+			<pattern>(?A:date/ddmmyyyysep)</pattern>
+			<pattern>(?A:date/ddmmyyyy_safe)</pattern>
+			<pattern>(?A:date/ddmmyysep)</pattern>
+			<pattern>(?A:date/ddmmyy)</pattern>
+			<pattern>(?A:date/mmddyyyysep)</pattern>
+			<pattern>(?A:date/mmddyyyy)</pattern>	 -->		
+		</entity>
+		<entity name="Nationalite" type="public" case="insensitive">
+			<pattern>(?A:ethnicity/nationality/fre)</pattern>
+			<pattern>(?A:ethnicity/ethnic_groups/fre)</pattern>
+		</entity>
+		<entity name="Genre" type="public" case="insensitive">
+			<pattern>(?A:gender/all/fre)</pattern>
+		</entity>
+		<entity name="Internet" type="public" case="insensitive">
+			<pattern>(?A:internet/host_domain)</pattern>
+			<pattern>(?A:internet/addr_email)</pattern>
+		</entity>
+		<entity name="Etude" type="public" case="insensitive">
+			<entry headword="Maitrise"/>
+			<entry headword="Master"/>
+			<entry headword="Licence"/>
+			<entry headword="Doctorat"/>
+			<entry headword="DEUG"/>
+			<entry headword="Baccalauréat"/>
+			<entry headword="DEA"/>
+		</entity>
+		<entity name="Formation" type="public" case="insensitive">
+			<entry headword="IUT"/>
+			<entry headword="LAIC"/>
+			<entry headword="ISIMA"/>
+		</entity>
+		<entity name="Experience" type="public" case="insensitive">
+			<pattern>(?A!Xp_tot=)[1-9][0-9]?</pattern>
+		</entity>
+		<entity name="Pseudo" type="public" case="insensitive">
+			<pattern>(?A!Name=)[A-Za-z0-9_]*\s[A-Za-z0-9_]*</pattern>
+		</entity>
+	</grammar>
+</grammars>
