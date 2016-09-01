@@ -16,7 +16,7 @@ function handler( document )
 	log:write_line( log_level_error() , "log message test : " .. ref)
 
 	-- tests the functions above
-	local file = 'C:\\HewlettPackardEnterprise\\IDOLServer\\cfs\\scripts\\meta_data_V2.csv'
+	local file = 'C:\\HewlettPackardEnterprise\\IDOLServer\\cfs\\scripts\\meta_data_V6_patch.csv'
 	local lines = lines_from(file)
 	local i = 0
 	local parsedLine = ""
@@ -33,7 +33,7 @@ function handler( document )
 			header = parsedLine
 			--log:write_line( log_level_error() ,"header = " .. header[1])
 		else
-			--log:write_line( log_level_error() ,' parsedLine[1] = ' .. parsedLine[1] .. ' ref = ' .. ref)
+			log:write_line( log_level_error() ,' parsedLine[1] = ' .. parsedLine[1] .. ' ref = ' .. ref)
 			if parsedLine[1] == ref then
 			log:write_line( log_level_error() ,' parsedLine[1] = ' .. parsedLine[1] .. ' ref = ' .. ref)
 				for ki,vi in pairs(header) do
